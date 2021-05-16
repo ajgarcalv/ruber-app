@@ -1,0 +1,58 @@
+.past-rides {
+    display: flex;
+    margin: 0px;
+    border: 0px;
+    box-sizing:border-box;
+    width: 50%; 
+    flex-direction: column;
+    height: 70%;
+}
+
+.past-rides__todo{
+    display: flex;
+    flex-direction: column;
+    justify-self: right;
+    margin: 15px;
+    padding: 0;
+    box-sizing:border-box;
+    background-color: orangered;
+    border: 2px solid black;
+
+}
+
+.past-rides__todo-button {
+  border-radius: 2px;
+  display: flex;
+  width: 5%;
+  
+}
+
+.past-rides-img__container {
+  display: flex;
+  width: 50%;
+  box-sizing: border-box;
+  
+  
+}
+
+.past-rides-img {
+  width: 100px;
+  height: 100px;
+  
+}
+
+#x-button {
+  background-color: red;
+}
+
+#edit-button {
+  background-color: lightblue;
+}
+
+.rides-this-month {
+
+}
+
+.average-ride-length {
+
+}
