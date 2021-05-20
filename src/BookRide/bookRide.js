@@ -7,7 +7,7 @@ const BookRide = () => {
 
     <div className='book-ride'>
       <div className="book-ride__icon">
-        <img src={CarIcon} alt="" />
+        <img className="book-ride__img" src={CarIcon} alt="" />
           Book Ride
         </div>
 
@@ -33,8 +33,9 @@ const BookRide = () => {
             Drop Off
           <input type="text" />
           </form>
-
+          <div className="submit-button__container">
           <button className="dabutton">Submit</button>
+          </div>
         </div>
       </div>
     </div>

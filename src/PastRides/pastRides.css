@@ -1,6 +1,6 @@
 .past-rides {
     display: flex;
-    margin: 0px;
+    margin: 15px;
     border: 0px;
     box-sizing:border-box;
     width: 50%; 
@@ -10,13 +10,18 @@
 
 .past-rides__todo{
     display: flex;
-    flex-direction: column;
-    justify-self: right;
     margin: 15px;
+    justify-content: space-between;
     padding: 0;
-    box-sizing:border-box;
-    background-color: orangered;
+    box-sizing: border-box;
+    background-image: linear-gradient(to bottom left, orangered, rgb(255, 145, 0));
     border: 2px solid black;
+
+}
+
+.past-rides__todo-buttons-container {
+  display: flex;
+  flex-direction: column;
 
 }
 
@@ -43,16 +48,14 @@
 
 #x-button {
   background-color: red;
+  width: 100%;
+  padding: 2px;
+  margin: 2px;
 }
 
 #edit-button {
-  background-color: lightblue;
-}
-
-.rides-this-month {
-
-}
-
-.average-ride-length {
-
+  background-color: rgb(42, 152, 216);
+  width: 100%;
+  padding: 2px;
+  margin: 2px;
 }
