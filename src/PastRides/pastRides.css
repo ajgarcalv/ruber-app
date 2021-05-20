@@ -19,9 +19,28 @@
 
 }
 
+.past-ride__item-container {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.past-rides__item {
+  flex: 1;
+}
+
+/* .past-rides__item {
+  display: flex;
+  flex-direction: column;
+} */
+
 .past-rides__todo-buttons-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  width: 35px;
 
 }
 

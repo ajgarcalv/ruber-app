@@ -49,7 +49,7 @@
   margin: 10px;
 }
 
-.submit-button__container {
+.submit-button {
   width: 100%;
   display: flex;
   flex-direction:row-reverse
