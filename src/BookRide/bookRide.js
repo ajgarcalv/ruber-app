@@ -3,13 +3,25 @@ import CarIcon from '../images/car-icon.png';
 import '../BookRide/bookRide.css';
 
 
-const BookRide = ({ addRide }) => {
+const BookRide = ({ addRide, state, setState }) => {
 
-  const [firstName, setfirstName] = useState("");
+  const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const handleSubmit = () => {
+  const [pickUp, setPickUp] = useState("");
+  const [dropOff, setDropOff] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const length = Math.round(((Math.random() * 100) + 10) * 10) / 10;
 
+    let riderInfo = {
+      firstName: firstName,
+      lastName: lastName,
+      pickUpLocation: pickUp,
+      dropOffLocation: dropOff,
+      rideLength: length
+    };
 
+    addRide(riderInfo)
   }
 
 
@@ -20,67 +32,71 @@ const BookRide = ({ addRide }) => {
     <div className='book-ride'>
       <div className="book-ride__icon">
         <img className="book-ride__img" src={CarIcon} alt="" />
-          Book Ride
-        </div>
+        Book Ride
+      </div>
 
 
       <div className="book-ride__item-box">
-        <div className="book-ride__personal-info">
-          <form
+        <form className="book-ride__personal-info">
+          <div
             className="book-ride__item"
             action=""
           >
             First Name
-        <input
+            <input 
+              value={ firstName } 
+              onChange={e => setFirstName(e.target.value) }
               type="text"
             />
-          </form>
+          </div>
 
-          <form
+          <div
             className="book-ride__item"
             action=""
           >
             Last Name
-        <input
+            <input 
+              value={ lastName } 
+              onChange={ e => setLastName(e.target.value) }
               type="text"
-
-
             />
-          </form>
+          </div>
 
-          <form
+          <div
             className="book-ride__item"
             action=""
           >
             Pick Up
-          <input
+            <input 
+              value={pickUp} 
+              onChange={ e => setPickUp(e.target.value)}
               type="text"
-
-
             />
-          </form>
+          </div>
 
-          <form
+          <div
             className="book-ride__item"
             action=""
           >
             Drop Off
-          <input
+            <input 
+              value={dropOff} 
+              onChange = {e => setDropOff(e.target.value)}
               type="text"
-
-
             />
-          </form>
+          </div>
           <div className="submit-button__container">
-            <button
+            <button 
+              type="submit"
               className="submit-button"
+              onClick={e => handleSubmit(e)}
             >Submit</button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
 
-  )
+  );
 
 }
 

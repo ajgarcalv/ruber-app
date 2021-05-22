@@ -29,22 +29,22 @@ function App() {
   pickUpLocation:
   dropOffLocation:
   rideLength:
-  */ 
+  */
   // }
 
   const [rides, setRides] = useState([ride1, ride2]);
 
-  const addRide = ( bookRideItem ) => {
+  const addRide = (bookRideItem) => {
     let tempRides = [...rides, bookRideItem];
     setRides(tempRides);
   }
 
-  const deleteRide = ( rideId ) => {
+  const deleteRide = (rideId) => {
     let tempRides = [...rides]
 
     for (let i = 0; i < tempRides.length; i++) {
       if (tempRides[i].id === rideId) {
-        tempRides.splice(i,1)
+        tempRides.splice(i, 1)
 
       }
 
@@ -54,9 +54,9 @@ function App() {
 
   }
 
-  const updateRide = ( rideInformation ) => {
+  const updateRide = (rideInformation) => {
     let tempRides = [...rides]
-    for (let i=0; i < tempRides.length; i++) {
+    for (let i = 0; i < tempRides.length; i++) {
       if (tempRides[i].id === rideInformation.id) {
         tempRides[i] = rideInformation;
       }
@@ -69,8 +69,8 @@ function App() {
     <div className="App">
       <HeaderLogo />
       <div className="rides">
-      <BookRide addRide={addRide}/>
-      <PastRides pastRides={rides} deleteRide={deleteRide}/>
+        <BookRide addRide={addRide} />
+        <PastRides pastRides={rides} deleteRide={deleteRide} />
       </div>
     </div>
   );
